@@ -1,2 +1,2 @@
 # Shreya-sApp
-A Rapido clone app for Shreya
+uber as reference
