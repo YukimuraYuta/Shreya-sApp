@@ -1,2 +1,40 @@
 Add All learning matrial here:
 watch this video: https://youtu.be/0-S5a0eXPoc?si=hYKtGb4vBKvLudXz
+
+For Apk: React Native CLI,Expo
+
+Expo code:
+expo login
+expo build:android
+eas build -p android --profile preview
+
+keytool -genkey -v -keystore my-release-key.keystore -alias myKeyAlias -keyalg RSA -keysize 2048 -validity 10000
+
+file path : android/app/my-release-key.keystore
+
+MYAPP_UPLOAD_STORE_FILE=my-release-key.keystore
+MYAPP_UPLOAD_KEY_ALIAS=myKeyAlias
+MYAPP_UPLOAD_STORE_PASSWORD=your-password
+MYAPP_UPLOAD_KEY_PASSWORD=your-password
+
+signingConfigs {
+    release {
+        storeFile file(MYAPP_UPLOAD_STORE_FILE)
+        storePassword MYAPP_UPLOAD_STORE_PASSWORD
+        keyAlias MYAPP_UPLOAD_KEY_ALIAS
+        keyPassword MYAPP_UPLOAD_KEY_PASSWORD
+    }
+}
+
+buildTypes {
+    release {
+        signingConfig signingConfigs.release
+        minifyEnabled false
+    }
+}
+
+cd android
+./gradlew assembleRelease
+gradlew assembleRelease
+./gradlew bundleRelease
+
