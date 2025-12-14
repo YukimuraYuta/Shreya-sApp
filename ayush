@@ -1,0 +1,336 @@
+. Program Structure / Basics
+import
+library
+part
+part of
+main
+
+
+Use:
+
+import → include other files/packages
+
+main → entry point of the program
+
+🔹 2. Variables & Keywords
+var
+dynamic
+final
+const
+late
+
+
+Use:
+
+var → type inferred automatically
+
+dynamic → type can change
+
+final → value set once at runtime
+
+const → compile-time constant
+
+late → initialize later
+
+🔹 3. Data Types
+int
+double
+num
+String
+bool
+List
+Set
+Map
+
+🔹 4. Conditional Statements
+if
+else
+else if
+switch
+case
+default
+
+🔹 5. Loops & Control
+for
+while
+do
+break
+continue
+
+🔹 6. Functions
+void
+return
+async
+await
+yield
+
+
+Use:
+
+async / await → asynchronous programming
+
+🔹 7. Object-Oriented Programming (OOP)
+class
+this
+new
+extends
+implements
+with
+abstract
+interface
+mixin
+super
+
+🔹 8. Constructors
+constructor
+factory
+const
+
+🔹 9. Access Control (Visibility)
+
+Dart uses underscore _ for private members:
+
+_
+
+
+Example:
+
+int _age; // private variable
+
+🔹 10. Exception Handling
+try
+catch
+on
+throw
+finally
+
+🔹 11. Null Safety (VERY IMPORTANT)
+?
+!
+late
+required
+
+
+Example:
+
+String? name;  // nullable
+String title!; // force unwrap
+
+🔹 12. Collections & Iteration
+forEach
+map
+where
+expand
+
+🔹 13. Operators
+==
+!=
+>
+<
+>=
+<=
++
+-
+*
+/
+%
+
+🔹 14. Flutter-Specific Common Keywords 
+build
+BuildContext
+Widget
+StatelessWidget
+StatefulWidget
+setState
+
+
+
+
+  2 here are some of the important css like tags for dart 
+but jus remeber that we cant use html or css in dart dart has seperate tages for css work
+
+1. Color (CSS → Flutter)
+CSS
+color
+background-color
+
+Dart (Flutter)
+color:
+Colors.red
+Color(0xFF000000)
+
+
+Example:
+
+Text(
+  'Hello',
+  style: TextStyle(color: Colors.blue),
+)
+
+🔹 2. Font Styling
+CSS
+font-size
+font-weight
+font-style
+font-family
+
+Dart (Flutter)
+fontSize:
+fontWeight:
+fontStyle:
+fontFamily:
+
+
+Example:
+
+TextStyle(
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
+  fontStyle: FontStyle.italic,
+)
+
+🔹 3. Padding & Margin
+CSS
+padding
+margin
+
+Dart (Flutter)
+Padding
+EdgeInsets.all()
+EdgeInsets.symmetric()
+EdgeInsets.only()
+
+
+Example:
+
+Padding(
+  padding: EdgeInsets.all(16),
+  child: Text("Hello"),
+)
+
+🔹 4. Width & Height
+CSS
+width
+height
+
+Dart (Flutter)
+width:
+height:
+
+
+Example:
+
+Container(
+  width: 200,
+  height: 100,
+)
+
+🔹 5. Border (CSS → Flutter)
+CSS
+border
+border-radius
+
+Dart (Flutter)
+BoxDecoration
+Border.all()
+BorderRadius.circular()
+
+
+Example:
+
+Container(
+  decoration: BoxDecoration(
+    border: Border.all(color: Colors.black),
+    borderRadius: BorderRadius.circular(12),
+  ),
+)
+
+🔹 6. Alignment
+CSS
+text-align
+align-items
+justify-content
+
+Dart (Flutter)
+TextAlign.center
+Alignment.center
+MainAxisAlignment
+CrossAxisAlignment
+
+
+Example:
+
+Row(
+  mainAxisAlignment: MainAxisAlignment.center,
+)
+
+🔹 7. Background Image
+CSS
+background-image
+
+Dart (Flutter)
+DecorationImage
+AssetImage
+NetworkImage
+
+🔹 8. Box Shadow
+CSS
+box-shadow
+
+Dart (Flutter)
+BoxShadow
+
+
+Example:
+
+boxShadow: [
+  BoxShadow(
+    color: Colors.black26,
+    blurRadius: 10,
+  ),
+]
+
+🔹 9. Display / Layout
+CSS
+display: flex
+
+Dart (Flutter)
+Row
+Column
+Flex
+Expanded
+
+🔹 10. Positioning
+CSS
+position
+top
+left
+right
+bottom
+
+Dart (Flutter)
+Stack
+Positioned
+
+🔹 11. Opacity
+CSS
+opacity
+
+Dart (Flutter)
+Opacity
+
+🔹 12. Overflow
+CSS
+overflow
+
+Dart (Flutter)
+overflow: TextOverflow.ellipsis
+
+🔹 13. Border Radius (Buttons & Cards)
+shape: RoundedRectangleBorder(
+  borderRadius: BorderRadius.circular(12),
+)
+
+🔹 14. Responsive Styling (Media Query)
+MediaQuery.of(context).size.width
+
